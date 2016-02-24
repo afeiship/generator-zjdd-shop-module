@@ -1,0 +1,14 @@
+extends layout/default
+
+block head
+  title <%= module_name %>
+  link(type = "text/css" , rel = "stylesheet" , href = "css/<%= module_name %>.css")
+
+block body
+  script(type="text/kulor-template", id="<%= moduleName %>Tmpl")
+    .<%= module_name %> Start your Jade code herer!
+
+
+block script
+  script var globalData = !{dataString};
+  script(src="js/<%= module_name %>.js")

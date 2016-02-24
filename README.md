@@ -1,4 +1,6 @@
 #generator-zjdd-shop-module
+##description:
++ Yeoman generator for zjdd-wap-shop module
 
 ## usage:
 + cd generator-zjdd-shop-module
