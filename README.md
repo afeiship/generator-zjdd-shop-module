@@ -3,8 +3,8 @@
 + Yeoman generator for zjdd-wap-shop module
 
 ## usage:
-+ cd generator-zjdd-shop-module
-+ npm link(run in local)
++ npm install yo -g
++ npm install generator-zjdd-shop-module -g
 + yo zjdd-shop-module
 
 ## dev:
