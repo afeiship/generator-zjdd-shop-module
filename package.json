@@ -1,6 +1,6 @@
 {
   "name": "generator-zjdd-shop-module",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Yeoman generator for zjdd-wap-shop module",
   "author": {
     "name": "afei",
