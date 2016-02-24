@@ -5,6 +5,7 @@
 ## usage:
 + npm install yo -g
 + npm install generator-zjdd-shop-module -g
++ cd zjdd_wap_shop(Your project direction)
 + yo zjdd-shop-module
 
 ## dev:
