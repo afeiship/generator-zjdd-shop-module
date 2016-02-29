@@ -24,7 +24,7 @@ module.exports = Base.extend(function () {
       '<%= module_name %>'
     );
   },
-  doPost: function * () {
+  doPOST: function * () {
     var query = this.getQuery();
     return yield function () {
       return 1;
