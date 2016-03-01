@@ -22,10 +22,6 @@ module.exports = yeoman.generators.Base.extend({
       }
     }, {
       type: 'input',
-      name: 'module_cn_name',
-      message: 'Your module_cn(中文名字) name?'
-    }, {
-      type: 'input',
       name: 'wiki_url',
       message: 'Your wiki url?'
     }];
@@ -53,9 +49,7 @@ module.exports = yeoman.generators.Base.extend({
     var props = this.props;
     this._module_name = props['module_name'];
     _.each(props, function (prop, key) {
-      if (key !== 'module_cn_name') {
-        this.props[this._camelCase(key)] = this._camelCase(prop);
-      }
+      this.props[this._camelCase(key)] = this._camelCase(prop);
     }, this);
   },
   _writingHandler: function () {

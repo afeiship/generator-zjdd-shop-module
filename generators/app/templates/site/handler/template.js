@@ -1,5 +1,5 @@
 /**
- * <%= module_cn_name %>
+ * <%= module_name %>
  * 商家版通用token test`test`1
  * URL： http://shop.zaijiadd.com/<%= module_name %>.php?zjtoken=test`test`1
  * WiKi：<%= wiki_url %>
