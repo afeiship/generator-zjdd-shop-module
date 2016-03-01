@@ -16,7 +16,10 @@ module.exports = yeoman.generators.Base.extend({
     var prompts = [{
       type: 'input',
       name: 'module_name',
-      message: 'Your module name?'
+      message: 'Your module name?',
+      validate: function (str) {
+        return str.length > 0;
+      }
     }, {
       type: 'input',
       name: 'module_cn_name',
