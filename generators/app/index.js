@@ -38,6 +38,7 @@ module.exports = yeoman.generators.Base.extend({
     this._writingJade();
     this._writingJs();
     this._writingLess();
+    this._writingLib();
   },
   install: function () {
     //this.installDependencies();
@@ -78,6 +79,12 @@ module.exports = yeoman.generators.Base.extend({
       this.templatePath('./src/less/template.less'),
       this.destinationPath('./src/less/' + this._module_name + '.less'),
       this.props
+    );
+  },
+  _writingLib:function(){
+    this.fs.copy(
+      this.templatePath('./src/js/lib/**'),
+      this.destinationPath('./src/js/lib/')
     );
   },
   _camelCase: function (inString) {
