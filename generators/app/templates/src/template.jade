@@ -5,8 +5,13 @@ block head
   link(type = "text/css" , rel = "stylesheet" , href = "css/<%= module_name %>.css")
 
 block body
-  script(type="text/kulor-template", id="<%= moduleName %>Tmpl")
-    .<%= module_name %> Start your Jade code herer!
+  .nav-title
+    nav
+      a.back
+      p <%= module_name %>
+
+  .<%= module_name %> Start your Jade code herer!
+
 
 
 block script
