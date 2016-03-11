@@ -24,7 +24,7 @@ module.exports = Base.extend(function () {
       '<%= module_name %>'
     );
   },
-  dispatch: function * () {
+  cmdDispatch: function * () {
     var query = this.getQuery();
     var command = query.command;
     return yield this[command]();
