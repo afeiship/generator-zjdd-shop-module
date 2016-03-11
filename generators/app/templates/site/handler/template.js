@@ -24,6 +24,11 @@ module.exports = Base.extend(function () {
       '<%= module_name %>'
     );
   },
+  dispatch: function * () {
+    var query = this.getQuery();
+    var command = query.command;
+    return yield this[command]();
+  },
   doPOST: function * () {
     var query = this.getQuery();
     return yield function () {

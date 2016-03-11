@@ -19,6 +19,19 @@ require(['ModalView', 'UrlHash', 'DataView'], function (ModalView, UrlHash, Data
         interactiveScrollbars: true
       });
     },
+    doAjax: function (inName, inData, inOptions) {
+      $.ajax(
+        $.extend({
+          url: "./<%= module_name %>.php",
+          type: "POST",
+          dataType: "json",
+          data: {
+            command: inName,
+            data: inData
+          }
+        }, inOptions)
+      );
+    },
     _nav_back_click: function () {
       history.go(-1);
     }
