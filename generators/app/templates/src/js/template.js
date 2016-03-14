@@ -8,9 +8,13 @@ require(['ModalView', 'UrlHash', 'DataView'], function (ModalView, UrlHash, Data
 
   self.addModalEvent({
     initComponents: function () {
+      self._$toast = $('.zjdd-toast');
       self.initMethods();
       self.initFilters();
       self.initVm();
+      setTimeout(function () {
+        //self.initIScroll();
+      }, 0);
     },
     initIScroll: function () {
       self._iscroll = new IScroll('.wrapper', {
@@ -40,6 +44,25 @@ require(['ModalView', 'UrlHash', 'DataView'], function (ModalView, UrlHash, Data
           return 'demo-text';
         }
       };
+    },
+    showToast: function (inText) {
+      var self = this;
+      this._$toast.text(inText);
+      this._$toast.data('visible', true);
+      setTimeout(function () {
+        self._$toast.data('visible', false);
+      }, 3000);
+    },
+    getSMGCode: function (inData) {
+      return self.doAjax('getSMGCode', inData, {
+        success: function (inResp) {
+          var msg = inResp.msg;
+          if (!inResp.code) {
+            msg = 'Test!'
+          }
+          self.showToast(msg);
+        }
+      });
     },
     doAjax: function (inName, inData, inOptions) {
       $.ajax(
