@@ -30,6 +30,6 @@ module.exports = Base.extend(function () {
     return yield this[command](query.data);
   },
   doPOST: function * () {
-    return yield self.cmdDispatch();
+    return yield this.cmdDispatch();
   }
 });
